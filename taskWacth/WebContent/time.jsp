@@ -3,7 +3,7 @@
   <html>
   <head>
     <meta charset="UTF-8">
-    <title>現在時刻</title>
+    <title>タスク</title>
   </head>
   <body>
     <h1>現在時刻</h1>
