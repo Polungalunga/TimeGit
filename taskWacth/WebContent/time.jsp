@@ -3,10 +3,10 @@
   <html>
   <head>
     <meta charset="UTF-8">
-    <title>タスク</title>
+    <title>タスク!!!</title>
   </head>
   <body>
-    <h1>タスク</h1>
+    <h1>タスク!!!</h1>
       <p> 現在の日付は: <span id="currentDate"></span> </p>
       <p> 現在の時刻は: <span id="currentTime"></span> </p>
       <p id="elapsedTime"> 経過時間: <span id="elapsedTimeValue">N/A</span> </p>
