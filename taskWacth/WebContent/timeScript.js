@@ -3,31 +3,33 @@
  */
 let startDate;
 let endDate;
+let isTiming = false;
 // 経過時間を追跡
 let elapsedMilliseconds = 0;
 let elapsedTimeElement = document.getElementById("elapsedTimeValue");
-let startButton;
-let stopButton;
+let startButton = document.getElementById("startButton");
+let stopButton = document.getElementById("stopButton");
 
 
 function updateDateTime() {
 	document.addEventListener('DOMContentLoaded', function() {
 		elapsedTimeElement = document.getElementById("elapsedTimeValue");
-		startButton = document.getElementById("startButton");
-		stopButton = document.getElementById("stopButton");
-
 		// STARTボタンのクリックハンドラ
 		startButton.addEventListener("click", function() {
+			if(!isTiming){
 			startDate = new Date();
 			endDate = null;
 			elapsedMilliseconds = 0;
 			elapsedTimeElement.textContent = "計測中…";
 			startButton.disabled = true;
 			stopButton.disabled = false;
+			isTiming = true;
+			}
 		});
 		// STOPボタンのクリックハンドラ
 		stopButton.addEventListener("click", function() {
-			if (startDate) {
+/*			if (startDate) {*/
+			if (isTiming) {
 				endDate = new Date();
 				elapsedMilliseconds += endDate - startDate;
 				let seconds = Math.floor(elapsedMilliseconds / 1000);
@@ -37,6 +39,7 @@ function updateDateTime() {
   				elapsedTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
 				startButton.disabled = false;
 				stopButton.disabled = true;
+				isTiming = false;
 			}
 		});
 	})
