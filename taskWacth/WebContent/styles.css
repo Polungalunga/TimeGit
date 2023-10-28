@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* ページ全体を中央に配置する */
+/* ページ全体を上部中央に配置する */
 body {
 	display: flex;
 	flex-direction: column;
