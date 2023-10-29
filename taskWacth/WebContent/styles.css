@@ -1,5 +1,5 @@
-@charset "UTF-8";
-/* ページ全体を上部中央に配置する */
+/* @charset "UTF-8";
+ページ全体を上部中央に配置する
 body {
 	display: flex;
 	flex-direction: column;
@@ -18,7 +18,7 @@ body {
     color: white;
     transition: background-color 0.3s;
 }
- /* マウスオーバー時の色 */
+ マウスオーバー時の色
 #startButton, #stopButton:hover {
 	background-color: #808080;
-}
+} */
