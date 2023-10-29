@@ -4,8 +4,8 @@
 let startDate;
 let endDate;
 let isTiming = false;
-// 経過時間を追跡
-let elapsedMilliseconds = 0;
+// 経過時間(秒単位)を追跡
+let elapsedSeconds;
 let elapsedTimeElement = document.getElementById("elapsedTimeValue");
 let startButton = document.getElementById("startButton");
 let stopButton = document.getElementById("stopButton");
@@ -19,7 +19,7 @@ function updateDateTime() {
 			if(!isTiming){
 			startDate = new Date();
 			endDate = null;
-			elapsedMilliseconds = 0;
+			elapsedSeconds = 1;
 			elapsedTimeElement.textContent = "計測中…";
 			startButton.disabled = true;
 			stopButton.disabled = false;
@@ -28,14 +28,12 @@ function updateDateTime() {
 		});
 		// STOPボタンのクリックハンドラ
 		stopButton.addEventListener("click", function() {
-/*			if (startDate) {*/
 			if (isTiming) {
 				endDate = new Date();
-				elapsedMilliseconds += endDate - startDate;
-				let seconds = Math.floor(elapsedMilliseconds / 1000);
-  				let hours = padZero(Math.floor(seconds / 3600));
-  				let minutes = padZero(Math.floor((seconds % 3600) / 60));
-  				seconds = padZero(seconds % 60);
+				elapsedSeconds += Math.floor((endDate - startDate) / 1000) ;
+  				let hours = padZero(Math.floor(elapsedSeconds / 3600));
+  				let minutes = padZero(Math.floor((elapsedSeconds % 3600) / 60));
+				let seconds =  padZero(elapsedSeconds % 60);
   				elapsedTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
 				startButton.disabled = false;
 				stopButton.disabled = true;
