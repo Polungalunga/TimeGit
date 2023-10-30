@@ -22,6 +22,6 @@
 		</form>
 	</div>
 
-	<script type="text/javascript" src="timeScript.js"></script>
+	<script type="text/javascript" src="js/timeScript.js"></script>
 </body>
 </html>
