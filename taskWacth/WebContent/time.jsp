@@ -8,6 +8,9 @@
 </head>
 <body>
 	<div class="container">
+		<a href="https://www.google.com" >
+			<img alt="履歴アイコン" src="images/history.png" class="history-icon">
+		</a>
 		<div class="clock">
 			<p>現在の日付は: <span id="currentDate"></span></p>
 			<p>現在の時刻は: <span id="currentTime"></span></p>
