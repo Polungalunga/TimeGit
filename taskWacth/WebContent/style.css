@@ -1,43 +1,65 @@
- @charset "UTF-8";
-/* ページ全体を上部中央に配置する */
+@charset "UTF-8";
+/* Google Fonts 読み込み */
+@import
+	url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+/* ページ全体 */
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	height: 100vh;
 	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 /* STARTボタン */
 #startButton {
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  border-radius: 25px;
-  border: 2px solid #80808080;
-  background-color: #80808080;
-  color: white;
-  transition: background-color 0.3s;
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	border-radius: 25px;
+	border: 2px solid #80808080;
+	background-color: #80808080;
+	color: white;
+	transition: background-color 0.3s;
 }
 
 /* STARTボタンのホバーエフェクト */
 #startButton:hover {
-  background-color: #808080;
+	background-color: #808080;
 }
 
 /* STOPボタン */
 #stopButton {
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  border-radius: 25px;
-  border: 2px solid #80808080;
-  background-color: #80808080;
-  color: white;
-  transition: background-color 0.3s;
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	border-radius: 25px;
+	border: 2px solid #80808080;
+	background-color: #80808080;
+	color: white;
+	transition: background-color 0.3s;
 }
 
 /* STOPボタンのホバーエフェクト */
 #stopButton:hover {
-  background-color: #808080;
+	background-color: #808080;
+}
+
+/* コンテナ */
+.container {
+	height: 100vh;
+	background-color: #15151e;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* 時間・日付の文字色 */
+.clock {
+	font-family: 'Share Tech Mono', monospace;
+	color: rgb(87, 255, 171);
+	text-shadow: 0 0 20px rgb(0, 255, 128);
+	line-height: 1.2;
+	text-align: center;
+	font-size: 100px
 }
