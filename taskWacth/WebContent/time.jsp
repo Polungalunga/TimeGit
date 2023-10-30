@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="style.css?ver=1.0">
+<link rel="stylesheet" type="text/css" href="css/style.css?ver=1.0">
 <title>タスク!!!</title>
 </head>
 <body>
