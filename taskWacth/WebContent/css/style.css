@@ -64,7 +64,7 @@ body {
 }
 
 /* 履歴アイコン */
-.history-icon {
+.history-icon, .home-icon {
   position: absolute;
   top: 50px;
   right: 100px;

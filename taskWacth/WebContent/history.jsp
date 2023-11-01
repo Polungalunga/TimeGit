@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +7,10 @@
 <title>履歴</title>
 </head>
 <body>
-		<a href="time.jsp" >
+	<div class="container">
+		<a href="time.jsp">
 			<img alt="ホームアイコン" src="images/home.png" class="home-icon">
 		</a>
+	</div>
 </body>
 </html>
