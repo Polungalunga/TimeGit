@@ -47,12 +47,6 @@ public class TimeServlet extends HttpServlet {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu/MM/dd HH:mm:ss");
         String strCurrentTime = currentTime.format(formatter);
 
-        // 動作確認
-		if("START".equals(buttonPressed)) {
-			System.out.println("STARTボタンが押されました" + strCurrentTime);
-		}else if("STOP".equals(buttonPressed)) {
-			System.out.println("STOPボタンが押されました"+ strCurrentTime);
-		}
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
