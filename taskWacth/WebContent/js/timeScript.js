@@ -34,10 +34,14 @@ function updateDateTime() {
   				let hours = padZero(Math.floor(elapsedSeconds / 3600));
   				let minutes = padZero(Math.floor((elapsedSeconds % 3600) / 60));
 				let seconds =  padZero(elapsedSeconds % 60);
+
   				elapsedTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
 				startButton.disabled = false;
 				stopButton.disabled = true;
 				isTiming = false;
+
+				// 経過時間をCookieに保存
+				document.cookie = "elapsedTime=" + elapsedTimeElement.textContent;
 			}
 		});
 	})

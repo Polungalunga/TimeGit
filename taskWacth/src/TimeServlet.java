@@ -47,6 +47,7 @@ public class TimeServlet extends HttpServlet {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu/MM/dd HH:mm:ss");
         String strCurrentTime = currentTime.format(formatter);
 
+
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

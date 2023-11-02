@@ -11,6 +11,10 @@
 		<a href="time.jsp">
 			<img alt="ホームアイコン" src="images/home.png" class="home-icon">
 		</a>
+		<div>
+			経過時間:<span id="elapsedTimeValue">${elapsedTime}</span>
+		</div>
 	</div>
+	<script type="text/javascript" src="js/historyScript.js"></script>
 </body>
 </html>
